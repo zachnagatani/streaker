@@ -1,6 +1,21 @@
+// Global
+body {
+    font-size: 16px;
+}
+
+main {
+    padding: 30px 0;
+}
+
 // Quote Styles
 .quote {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
+}
+
+// ActionSheet Styles
+.action-sheet {
+    padding: 10px 40px 30px;
+    margin-bottom: 30px;
 }

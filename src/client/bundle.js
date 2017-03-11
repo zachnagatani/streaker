@@ -14265,7 +14265,11 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at erat id justo consectetur tempor ut at ex.'
                 })
             ),
-            this.props.children
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'main',
+                null,
+                this.props.children
+            )
         );
     }
 };
@@ -38871,7 +38875,17 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ActionSheet__ = __webpack_require__(440);
 
+
+
+const style = {
+    height: 100,
+    width: 100,
+    margin: 20,
+    textAlign: 'center',
+    display: 'inline-block'
+};
 
 class Dashboard extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     constructor(props) {
@@ -38879,7 +38893,18 @@ class Dashboard extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
     }
 
     render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "container" });
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__ActionSheet__["a" /* default */], {
+                actionTitle: 'Apply for a Job',
+                currentStreak: '5',
+                highestStreak: '5' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__ActionSheet__["a" /* default */], {
+                actionTitle: 'Apply for a Job',
+                currentStreak: '5',
+                highestStreak: '5' })
+        );
     }
 };
 
@@ -38905,6 +38930,53 @@ const Quote = props => {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = Quote;
+
+/***/ }),
+/* 440 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Paper__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Paper___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_Paper__);
+
+
+
+const ActionSheet = props => {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'row' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_material_ui_Paper___default.a,
+            { className: 'col-xs-10 col-xs-offset-1 action-sheet text-center' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'h2',
+                null,
+                props.actionTitle
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                { className: 'lead' },
+                'At a Glance:'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                'Current Streak: ',
+                props.currentStreak
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                'Highest Streak: ',
+                props.highestStreak
+            )
+        )
+    );
+};
+
+/* harmony default export */ __webpack_exports__["a"] = ActionSheet;
 
 /***/ })
 /******/ ]);

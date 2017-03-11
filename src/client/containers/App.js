@@ -19,7 +19,9 @@ class App extends React.Component {
                         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at erat id justo consectetur tempor ut at ex."
                     />
                 </header>
-                {this.props.children}
+                <main>
+                    {this.props.children}
+                </main>
             </div>
         );
     }
