@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer src/client/index.css",
-    "scss": "node-sass src/client/main.scss src/client/main.css -w src/client/index.scss",
+    "scss": "node-sass src/client/index.scss src/client/index.css -w src/client/index.scss",
     "serve": "browser-sync start --config bs-config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
