@@ -1,5 +1,6 @@
 import React from 'react';
 import ActionSheet from './ActionSheet';
+import AddActionButton from './AddActionButton';
 
 const style = {
   height: 100,
@@ -16,7 +17,7 @@ class Dashboard extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container container--dashboard">
                 <ActionSheet
                     actionTitle="Apply for a Job"
                     currentStreak="5"
@@ -26,6 +27,7 @@ class Dashboard extends React.Component {
                     actionTitle="Apply for a Job"
                     currentStreak="5"
                     highestStreak="5" />
+                <AddActionButton />
             </div>
         );
     }

@@ -7,6 +7,12 @@ main {
     padding: 30px 0;
 }
 
+// Helpers
+.lead {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 // Quote Styles
 .quote {
     font-size: 20px;
@@ -18,4 +24,9 @@ main {
 .action-sheet {
     padding: 10px 40px 30px;
     margin-bottom: 30px;
+}
+
+//AddActionButton Styles
+.add-action-button {
+    position: relative;
 }
