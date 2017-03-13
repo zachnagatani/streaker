@@ -1,6 +1,7 @@
 import React from 'react';
 import ActionSheet from './ActionSheet';
 import AddActionButton from './AddActionButton';
+import AddActionDialog from './AddActionDialog';
 
 const style = {
   height: 100,
@@ -28,6 +29,7 @@ class Dashboard extends React.Component {
                     currentStreak="5"
                     highestStreak="5" />
                 <AddActionButton />
+                <AddActionDialog />
             </div>
         );
     }
