@@ -17,5 +17,10 @@ main {
   padding: 10px 40px 30px;
   margin-bottom: 30px; }
 
-.add-action-button {
+.action-button-container {
   position: relative; }
+
+.add-action-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
