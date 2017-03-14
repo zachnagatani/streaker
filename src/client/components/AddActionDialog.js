@@ -3,6 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import AddActionButton from './AddActionButton';
+import { hashHistory } from 'react-router';
 
 class AddActionDialog extends React.Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class AddActionDialog extends React.Component {
 
     handleClose() {
         this.setState({ open: false });
+        hashHistory.push('/action');
     }
 
     render() {

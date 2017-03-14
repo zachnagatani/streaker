@@ -39992,6 +39992,8 @@ exports.default = _RaisedButton2.default;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_TextField__ = __webpack_require__(464);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_TextField___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_material_ui_TextField__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__AddActionButton__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_router__ = __webpack_require__(193);
+
 
 
 
@@ -40013,6 +40015,7 @@ class AddActionDialog extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Comp
 
     handleClose() {
         this.setState({ open: false });
+        __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* hashHistory */].push('/action');
     }
 
     render() {
