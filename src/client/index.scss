@@ -3,7 +3,8 @@ $dark-primary-color: #1976D2;
 $primary-color: #2196F3;
 $light-primary-color: #BBDEFB;
 $icon-color: #FFFFFF;
-$accent-color: #FF5252;
+$accent-color: #FF4081;
+$danger-color: #FF5252;
 $text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #BDBDBD;
@@ -56,7 +57,7 @@ main {
 .calendar__header {
     width: 100%;
     height: 100px;
-    background: #0097A7;
+    background: $primary-color;
     display: flex;
 }
 
@@ -112,7 +113,7 @@ main {
 }
 
 .delete-action-button {
-    color: $accent-color!important;
+    color: $danger-color!important;
     position: relative!important;
     top: 20px;
 }

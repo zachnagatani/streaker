@@ -15036,7 +15036,7 @@ const ActionSheet = props => {
             { className: 'col-xs-10 col-xs-offset-1 action-sheet text-center' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h2',
-                null,
+                { className: 'action-sheet__title' },
                 props.actionTitle
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -39440,11 +39440,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_styles_MuiThemeProvider__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_styles_MuiThemeProvider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_material_ui_styles_MuiThemeProvider__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_tap_event_plugin__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_tap_event_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_tap_event_plugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__containers_App__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Dashboard__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Action__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_styles_getMuiTheme__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_material_ui_styles_getMuiTheme___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_material_ui_styles_getMuiTheme__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__theme_muiTheme__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_tap_event_plugin__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_tap_event_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_tap_event_plugin__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__containers_App__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Dashboard__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Action__ = __webpack_require__(465);
 
 
 
@@ -39454,19 +39457,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_4_react_tap_event_plugin___default()();
+
+
+__WEBPACK_IMPORTED_MODULE_6_react_tap_event_plugin___default()();
 
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_3_material_ui_styles_MuiThemeProvider___default.a,
-    null,
+    { muiTheme: __WEBPACK_IMPORTED_MODULE_4_material_ui_styles_getMuiTheme___default()(__WEBPACK_IMPORTED_MODULE_5__theme_muiTheme__["a" /* default */]) },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_2_react_router__["a" /* Router */],
         { history: __WEBPACK_IMPORTED_MODULE_2_react_router__["b" /* hashHistory */] },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_2_react_router__["c" /* Route */],
-            { path: '/', component: __WEBPACK_IMPORTED_MODULE_5__containers_App__["a" /* default */] },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["c" /* Route */], { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_6__components_Dashboard__["a" /* default */] }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["c" /* Route */], { path: 'action', component: __WEBPACK_IMPORTED_MODULE_7__components_Action__["a" /* default */] })
+            { path: '/', component: __WEBPACK_IMPORTED_MODULE_7__containers_App__["a" /* default */] },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["c" /* Route */], { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_8__components_Dashboard__["a" /* default */] }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router__["c" /* Route */], { path: 'action', component: __WEBPACK_IMPORTED_MODULE_9__components_Action__["a" /* default */] })
         )
     )
 ), document.getElementById('root'));
@@ -43735,6 +43740,7 @@ class DeleteActionDialog extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.C
             onTouchTap: this.handleClose
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_FlatButton___default.a, {
             label: 'Delete Forever',
+            style: { color: '#FF5252' },
             onTouchTap: this.handleClose
         })];
 
@@ -45504,7 +45510,10 @@ const NavMenu = props => {
             style: { display: 'flex', alignItems: 'center' },
             iconStyle: { color: '#fff' }
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_MenuItem___default.a, { primaryText: 'Dashboard', onTouchTap: () => __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* hashHistory */].push('/dashboard') }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_MenuItem___default.a, {
+            primaryText: 'Dashboard',
+            onTouchTap: () => __WEBPACK_IMPORTED_MODULE_5_react_router__["b" /* hashHistory */].push('/dashboard')
+        }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_MenuItem___default.a, { primaryText: 'Log Out' })
     );
 };
@@ -47841,6 +47850,43 @@ var isIOS = exports.isIOS = function isIOS() {
   return (/iPad|iPhone|iPod/.test(window.navigator.userAgent) && !window.MSStream
   );
 };
+
+/***/ }),
+/* 494 */,
+/* 495 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const darkPrimaryColor = '#1976D2',
+      primaryColor = '#2196F3',
+      lightPrimaryColor = '#BBDEFB',
+      iconColor = '#FFFFFF',
+      accentColor = '#FF4081',
+      dangerColor = '#FF5252',
+      textColor = '#212121',
+      secondaryTextColor = '#757575',
+      dividerColor = '#BDBDBD',
+      muiTheme = {
+    palette: {
+        primary1Color: primaryColor,
+        primary2Color: darkPrimaryColor,
+        primary3Color: lightPrimaryColor,
+        accent1Color: accentColor,
+        accent2Color: accentColor,
+        textColor: textColor,
+        alternateTextColor: iconColor,
+        canvasColor: iconColor,
+        borderColor: dividerColor
+    },
+    floatingActionButton: {
+        color: accentColor
+    },
+    textField: {
+        focusColor: accentColor
+    }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = muiTheme;
 
 /***/ })
 /******/ ]);

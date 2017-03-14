@@ -32,6 +32,7 @@ class DeleteActionDialog extends React.Component {
             />,
             <FlatButton
                 label="Delete Forever"
+                style={{color: '#FF5252'}}
                 onTouchTap={this.handleClose}
             />
         ];

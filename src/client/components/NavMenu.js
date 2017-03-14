@@ -14,7 +14,10 @@ const NavMenu = props => {
             style={{display: 'flex', alignItems: 'center'}}
             iconStyle={{color: '#fff'}}
         >
-            <MenuItem primaryText="Dashboard" onTouchTap={() => hashHistory.push('/dashboard')} />
+            <MenuItem
+                primaryText="Dashboard"
+                onTouchTap={() => hashHistory.push('/dashboard')}
+            />
             <MenuItem primaryText="Log Out" />
         </IconMenu>
     );
