@@ -1,7 +1,8 @@
 import React from 'react';
-import Calendar from './Calendar';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
+import Calendar from './Calendar';
+import DeleteActionDialog from './DeleteActionDialog';
 
 const Action = props => {
     return (
@@ -26,11 +27,7 @@ const Action = props => {
                 </div>
             </div>
 
-            <div className="row">
-                <div className="col-xs-6 col-xs-offset-6 text-right">
-                    <FlatButton label="Delete Action" className="delete-action-button" />
-                </div>
-            </div>
+            <DeleteActionDialog />
         </div>
     );
 };
