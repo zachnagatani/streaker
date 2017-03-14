@@ -72,3 +72,11 @@ main {
   content: "X";
   color: #FF5252;
   font-size: 46px; }
+
+.complete-button {
+  margin-top: 20px; }
+
+.delete-action-button {
+  color: #FF5252 !important;
+  position: relative !important;
+  top: 20px; }

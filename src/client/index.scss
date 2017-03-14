@@ -106,15 +106,13 @@ main {
     font-size: 46px;
 }
 
-// .day {
-//     height: 65px;
-// }
+// Action Styles
+.complete-button {
+    margin-top: 20px;
+}
 
-// .row--dates {
-//     border-bottom: 1px solid #000;
-// }
-
-// .date {
-//     height: 67px;
-//     border: 1px solid black;
-// }
+.delete-action-button {
+    color: $accent-color!important;
+    position: relative!important;
+    top: 20px;
+}

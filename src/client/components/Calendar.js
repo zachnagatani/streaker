@@ -34,7 +34,7 @@ const Calendar = props => {
                                 <div className="date__body">
                                 </div>
                             </div>
-                            <div className="calendar__date">
+                            <div className="calendar__date calendar__date--crossed">
                                 <div className="date__header">
                                     10
                                 </div>
@@ -42,7 +42,7 @@ const Calendar = props => {
                                 <div className="date__body">
                                 </div>
                             </div>
-                            <div className="calendar__date">
+                            <div className="calendar__date calendar__date--crossed">
                                 <div className="date__header">
                                     10
                                 </div>
@@ -50,7 +50,7 @@ const Calendar = props => {
                                 <div className="date__body">
                                 </div>
                             </div>
-                            <div className="calendar__date">
+                            <div className="calendar__date calendar__date--crossed">
                                 <div className="date__header">
                                     10
                                 </div>
