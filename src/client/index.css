@@ -24,3 +24,51 @@ main {
   position: fixed;
   bottom: 20px;
   right: 20px; }
+
+.calendar {
+  height: 500px;
+  padding: 0; }
+
+.calendar__header {
+  width: 100%;
+  height: 100px;
+  background: #0097A7;
+  display: flex; }
+
+.month-header {
+  margin: auto;
+  color: #fff;
+  font-size: 36px; }
+
+.calendar__days {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 65px; }
+
+.dates__row {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #BDBDBD;
+  height: 67px; }
+
+.calendar__date {
+  border-right: 1px solid #BDBDBD;
+  width: 66.666%; }
+
+.calendar__date:last-child {
+  border-right: none; }
+
+.date__header {
+  height: 33.333%; }
+
+.date__body {
+  height: 66.666%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.calendar__date--crossed > .date__body:after {
+  content: "X";
+  color: #FF5252;
+  font-size: 46px; }
