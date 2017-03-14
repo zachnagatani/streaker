@@ -28,7 +28,6 @@ class Dashboard extends React.Component {
                     actionTitle="Apply for a Job"
                     currentStreak="5"
                     highestStreak="5" />
-                <AddActionButton />
                 <AddActionDialog />
             </div>
         );

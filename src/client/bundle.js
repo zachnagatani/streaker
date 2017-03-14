@@ -14763,7 +14763,6 @@ class Dashboard extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
                 actionTitle: 'Apply for a Job',
                 currentStreak: '5',
                 highestStreak: '5' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__AddActionButton__["a" /* default */], null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__AddActionDialog__["a" /* default */], null)
         );
     }
@@ -15081,7 +15080,7 @@ const AddActionButton = props => {
             { className: 'col-xs-3 col-xs-offset-9 text-right' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_material_ui_FloatingActionButton___default.a,
-                { className: 'add-action-button' },
+                { className: 'add-action-button', onTouchTap: () => props.handleOpen() },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_svg_icons_content_add___default.a, null)
             )
         )
@@ -39981,29 +39980,54 @@ exports.default = _RaisedButton2.default;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_ui_RaisedButton___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_material_ui_RaisedButton__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_TextField__ = __webpack_require__(464);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_material_ui_TextField___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_material_ui_TextField__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__AddActionButton__ = __webpack_require__(196);
 
 
 
 
 
-const AddActionDialog = props => {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_material_ui_Dialog___default.a,
-        {
-            className: 'text-center',
-            title: 'Create Action',
-            modal: false,
-            open: true
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_material_ui_TextField___default.a, {
-            hintText: 'Enter your city',
-            floatingLabelText: 'Search for Venues',
-            className: 'search-bar',
-            id: 'search',
-            name: 'search'
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_RaisedButton___default.a, { label: 'Create', primary: true })
-    );
+
+class AddActionDialog extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+    constructor(props) {
+        super(props);
+        this.state = { open: false };
+
+        this.handleOpen = this.handleOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+
+    handleOpen() {
+        this.setState({ open: true });
+    }
+
+    handleClose() {
+        this.setState({ open: false });
+    }
+
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__AddActionButton__["a" /* default */], { handleOpen: this.handleOpen }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_1_material_ui_Dialog___default.a,
+                {
+                    className: 'text-center',
+                    title: 'Create Action',
+                    modal: false,
+                    open: this.state.open
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_material_ui_TextField___default.a, {
+                    hintText: 'Enter your city',
+                    floatingLabelText: 'Search for Venues',
+                    className: 'search-bar',
+                    id: 'search',
+                    name: 'search'
+                }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_material_ui_RaisedButton___default.a, { label: 'Create', primary: true, onTouchTap: this.handleClose })
+            )
+        );
+    }
 };
 
 /* harmony default export */ __webpack_exports__["a"] = AddActionDialog;
