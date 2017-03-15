@@ -1,6 +1,6 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import AddActionButton from './AddActionButton';
 import { hashHistory } from 'react-router';
@@ -24,23 +24,34 @@ class AddActionDialog extends React.Component {
     }
 
     render() {
+        const actions = [
+            <FlatButton
+                label="Create Action"
+                primary={true}
+                onTouchTap={this.handleClose}
+            />,
+            <FlatButton
+                label="Cancel"
+                onTouchTap={this.handleClose}
+            />
+        ];
+
         return (
             <div>
                 <AddActionButton handleOpen={this.handleOpen} />
                 <Dialog
                     className="text-center"
                     title="Create Action"
+                    actions={actions}
                     modal={false}
                     open={this.state.open}
                 >
                     <TextField
-                        hintText="Enter your city"
-                        floatingLabelText="Search for Venues"
-                        className="search-bar"
-                        id="search"
-                        name="search"
+                        hintText="'Go Running'"
+                        floatingLabelText="Add An Action"
+                        id="add-action"
+                        name="add-action"
                     />
-                    <RaisedButton label="Create" primary={true} onTouchTap={this.handleClose} />
                 </Dialog>
             </div>
         );

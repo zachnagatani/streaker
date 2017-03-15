@@ -19,7 +19,7 @@ class App extends React.Component {
                     <NavMenu />
                     </AppBar>
                     <Quote
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at erat id justo consectetur tempor ut at ex."
+                        text="Don't break the streak!"
                     />
                 </header>
                 <main>
