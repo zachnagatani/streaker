@@ -17751,10 +17751,10 @@ const Action = props => {
             { className: 'row' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'col-xs-6 col-xs-offset-3' },
+                { className: 'col-xs-6 col-xs-offset-3 text-center' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_RaisedButton___default.a, {
-                    label: 'Mark as complete',
-                    primary: true,
+                    label: '\'X\' It!',
+                    secondary: true,
                     className: 'complete-button'
                 })
             )

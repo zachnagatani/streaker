@@ -18,10 +18,10 @@ const Action = props => {
             <Calendar />
 
             <div className="row">
-                <div className="col-xs-6 col-xs-offset-3">
+                <div className="col-xs-6 col-xs-offset-3 text-center">
                     <RaisedButton
-                        label="Mark as complete"
-                        primary={true}
+                        label="'X' It!"
+                        secondary={true}
                         className="complete-button"
                     />
                 </div>
